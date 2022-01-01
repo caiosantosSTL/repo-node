@@ -1,10 +1,13 @@
 const express = require('express')
+const pug = require('pug');
 
 const app = express()
 const port = 3005
 
+app.set('view engine', 'pug')
+
 app.get('/', function(req, res){
-    res.send('ola mundo')
+    res.render('pag')
 })
 
 app.listen(port, function(){
